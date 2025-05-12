@@ -1,0 +1,52 @@
+## Ignore build results
+bin/
+obj/
+[Ll]og/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore Rider IDE files
+.idea/
+*.sln.iml
+
+## Ignore user-specific files
+*.userprefs
+*.csproj.user
+
+## Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+# Uncomment if using NuGet Package Restore
+# !packages/build/
+
+## Ignore dotCover (JetBrains test coverage tool)
+*.dotCover
+
+## Ignore Rider's file-based settings (if not shared intentionally)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+## OS generated files
+[Dd]esktop.ini
+[Tt]humbs.db
+ehthumbs.db
+Icon?
+.DS_Store
+._*
+
+## Logs
+*.log
+
+## Visual Studio Code settings (if Rider devs use VS Code sometimes)
+.vscode/
+
+## Others
+*.vs/
+.ReSharper*/  # If ReSharper is installed alongside Rider
+
