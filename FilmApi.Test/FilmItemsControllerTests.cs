@@ -143,7 +143,7 @@ namespace FilmApi.Test
             // Assert
             Assert.IsType<NoContentResult>(result);
             var updatedFilm = await context.FilmItems.FindAsync(1);
-            Assert.NotNull(updatedFilm);           
+            Assert.NotNull(updatedFilm);
             Assert.Equal("Updated Name", updatedFilm.Name);
         }
     }
