@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: filmapi
+      POSTGRES_USER: filmapi
+      POSTGRES_PASSWORD: filmapi
+    ports:
+      - 5432:5432

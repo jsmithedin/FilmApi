@@ -1,55 +1,57 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace FilmApi.Models;
 
+[JsonConverter(typeof(JsonStringEnumConverter<FilmType>))]
 public enum FilmType
 {
-    [Display(Name = "Color Film")]
-    Color,
+    [JsonStringEnumMemberName("Colour Film")]
+    Colour,
 
-    [Display(Name = "Black and White")]
+    [JsonStringEnumMemberName("Black and White")]
     BlackAndWhite,
 
-    [Display(Name = "Slide Film")]
+    [JsonStringEnumMemberName("Slide Film")]
     Slide,
 
-    [Display(Name = "Negative Film")]
+    [JsonStringEnumMemberName("Negative Film")]
     Negative,
 
-    [Display(Name = "Instant Film")]
+    [JsonStringEnumMemberName("Instant Film")]
     Instant,
 
-    [Display(Name = "Infrared Film")]
+    [JsonStringEnumMemberName("Infrared Film")]
     Infrared
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter<FilmFormat>))]
 public enum FilmFormat
 {
-    [Display(Name = "35mm")]
+    [JsonStringEnumMemberName("35mm")]
     Format35mm,
 
-    [Display(Name = "120 Medium Format")]
+    [JsonStringEnumMemberName("120 Medium Format")]
     Format120,
 
-    [Display(Name = "4x5")]
+    [JsonStringEnumMemberName("4x5")]
     LargeFormat4x5,
 
-    [Display(Name = "8x10")]
+    [JsonStringEnumMemberName("8x10")]
     LargeFormat8x10,
 
-    [Display(Name = "110")]
+    [JsonStringEnumMemberName("110")]
     Format110,
 
-    [Display(Name = "220")]
+    [JsonStringEnumMemberName("220")]
     Format220,
 
-    [Display(Name = "Instant Pack")]
+    [JsonStringEnumMemberName("Instant Pack")]
     InstantPack,
 
-    [Display(Name = "Sheet Film")]
+    [JsonStringEnumMemberName("Sheet Film")]
     SheetFilm
 }
-
 
 public class FilmItem
 {
